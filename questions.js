@@ -3,17 +3,21 @@
  * Trouvez la façon de faire la plus optimal.
  * Il peut y avoir plusieur façon de faire.
  */
-var tailleString = function (texte) {
-    return 'A completer';
+var tailleString = function (texte) { //valider calculer la taille de la chaine de caractère
+   tailleString=texte.length
+    return tailleString;
 }
 var remplaceECar = function (texte) {
-    return 'A completer';
+    texte.charAt(1)=' '
+    return texte;
 }
-var concatString = function (texte1, texte2) {
-    return 'A completer';
+var concatString = function (texte1, texte2) { //valider concaténer 2 chaines de caractères
+    texte=texte1+texte2
+    return texte;
 }
 var afficherCar5 = function (texte) {
-    return 'A completer';
+    var char = texte.charAt(4);
+    return char;
 }
 var afficher9Car = function (texte) {
     return 'A completer';
