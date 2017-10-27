@@ -66,12 +66,9 @@ return numberSpace;
 }
 
 var InverseString = function (texte) {
-  var inverseText='';
+    var inverseText=texte.split('').reverse().join('');
   //permet de parcourir l'ensemble du texte caractère par caractère
-  for (var nav = 0; nav < texte.length; nav++) {
-    inverseText=texte[nav]+inverseText;
-  }
-return inverseText;
+  return inverseText;
 }
 
 /**
