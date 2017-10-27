@@ -4,65 +4,107 @@
  * Il peut y avoir plusieur façon de faire.
  */
 var tailleString = function (texte) { //valider calculer la taille de la chaine de caractère
-   tailleString=texte.length
+   var tailleString=texte.length;
     return tailleString;
 }
-var remplaceECar = function (texte) {
-    texte.charAt(1)=' '
+var remplaceECar = function (texte) { //remplace un caractère par un autre
+    texte=texte.replace('e', ' ');
     return texte;
 }
 var concatString = function (texte1, texte2) { //valider concaténer 2 chaines de caractères
-    texte=texte1+texte2
+    texte=texte1+texte2;
     return texte;
 }
-var afficherCar5 = function (texte) {
+var afficherCar5 = function (texte) { //afficher un caractère situé dans une chaine de caractère
     var char = texte.charAt(4);
     return char;
 }
 var afficher9Car = function (texte) {
-    return 'A completer';
+  var nineChar='';
+  for (var nav = 0; nav < 9; nav++) {
+      nineChar=nineChar+texte[nav];
+  }
+return nineChar;
 }
-var majusculeString = function (texte) {
-    return 'A completer';
+var majusculeString = function (texte) { // afficher en majuscule la chaine de caractère
+    texte=texte.toUpperCase();
+    return texte;
 }
-var minusculeString = function (texte) {
-    return 'A completer';
+var minusculeString = function (texte) { // afficher en minuscule la chaine de caractère
+  texte=texte.toLowerCase();
+  return texte;
 }
-var SupprEspaceString = function (texte) {
-
-      return 'A completer';
+var SupprEspaceString = function (texte) { //permet de supprimer les espaces avant et après, utile pour les formulaires
+    texte=texte.trim();
+    return texte;
 }
 var IsString = function (texte) {
-    return 'A completer';
+  var testString=isNaN(texte);  //fonction IsString
+    return testString;
 }
 var AfficherExtensionString = function (texte) {
-    return 'A completer';
+  var extension='';
+  var positionPoint=texte.indexOf('.');
+  if (positionPoint > -1){
+    for (var nav = positionPoint+1; nav < texte.length; nav++) {
+      extension=extension+texte[nav];
+    }
+  }
+  return extension;
 }
+
 var NombreEspaceString = function (texte) {
-    return 'A completer';
+  var numberSpace=0;
+  //permet de parcourir l'ensemble du texte caractère par caractère
+  for (var nav = 0; nav < texte.length; nav++) {
+    //permet de vérifier si le caractère est bien un espace
+      if(texte[nav] ===' '){
+        numberSpace++;
+      }
+  }
+return numberSpace;
 }
+
 var InverseString = function (texte) {
-    return 'A completer';
+  var inverseText='';
+  //permet de parcourir l'ensemble du texte caractère par caractère
+  for (var nav = 0; nav < texte.length; nav++) {
+    inverseText=texte[nav]+inverseText;
+  }
+return inverseText;
 }
 
 /**
  * Exercices sur les nombres et les caluls mathématiques
  */
-var calculPuissance = function (x, y) {
-    return 'A completer';
+var calculPuissance = function (x, y) { //calcule x puissance Y
+    var result=Math.pow(x,y);
+    return result;
 }
-var valeurAbsolue = function (nombre) {
-    return 'A completer';
+var valeurAbsolue = function (nombre) { //donne la valeur absolue
+    var result=Math.abs(nombre);
+    return result;
 }
 var valeurAbsolueArray = function (array) {
-    return 'A completer';
+    var sizeArray=array.length;
+    var result=[];
+    for(var nav=0;nav<sizeArray;nav++){
+      result.push(Math.abs(array[nav])); //push permet d'envoyer la valeur dans le tableau de variable result
+    }
+    return result;
 }
-var sufaceCercle = function (rayon) {
-    return 'A completer';
+var sufaceCercle = function (rayon) { //calcul de la surface d'un cercle
+    var surface= Math.round(Math.PI*Math.pow(rayon,2));
+    return surface;
 }
 var hypothenuse = function (ab, ac) {
-    return 'A completer';
+    result=Math.hypot(ab,ac);
+    return result;
 }
 var calculIMC = function (poids, taille) {
-    return 'A completer';
+  var  result=poids/(taille*taille);
+  //permet de ne garder que décimal après la virgule
+  result=parseFloat(result.toFixed(2));
+
+    return result;
 }
